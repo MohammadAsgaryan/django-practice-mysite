@@ -196,7 +196,10 @@ button,
 html [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; }
+  -webkit-appearance: button; /* Chrome, Safari */
+  -moz-appearance: button;    /* Firefox */
+  appearance: button;          /* استاندارد */
+}
 
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
@@ -214,7 +217,11 @@ input[type="checkbox"] {
 input[type="date"],
 input[type="time"],
 input[type="month"] {
-  -webkit-appearance: listbox; }
+  -webkit-appearance: listbox; /* Chrome, Safari */
+  -moz-appearance: listbox;    /* Firefox */
+  appearance: listbox;          /* استاندارد */
+}
+
 
 textarea {
   overflow: auto;
@@ -246,7 +253,11 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none; }
+  -webkit-appearance: none; /* Chrome, Safari */
+  -moz-appearance: none;    /* Firefox */
+  appearance: none;          /* استاندارد */
+}
+
 
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
@@ -922,7 +933,11 @@ button.close {
   padding: 0;
   background-color: transparent;
   border: 0;
-  -webkit-appearance: none; }
+  -webkit-appearance: none; /* Chrome, Safari */
+  -moz-appearance: none;    /* Firefox */
+  appearance: none;          /* استاندارد */
+}
+
 
 .modal-open {
   overflow: hidden; }
@@ -2224,11 +2239,17 @@ textarea.form-control {
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
-  -webkit-backface-visibility: hidden;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out; }
+
+  -webkit-backface-visibility: hidden; /* Chrome, Safari */
+  -moz-backface-visibility: hidden;    /* Firefox */
+  backface-visibility: hidden;         /* استاندارد */
+
+  -webkit-transition: all 0.3s ease-out; /* Chrome, Safari */
+  -moz-transition: all 0.3s ease-out;    /* Firefox */
+  -o-transition: all 0.3s ease-out;      /* Opera قدیمی */
+  transition: all 0.3s ease-out;         /* استاندارد */
+}
+
 
 .mfp-with-zoom.mfp-ready .mfp-container {
   opacity: 1; }
