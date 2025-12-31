@@ -46,14 +46,14 @@
                     <li class="colorlib-active"><a href="{% url 'website:index' %}">Home</a></li>
                     <li><a href="{% url 'website:photography' %}">Photography</a></li>
                     <li><a href="{% url 'website:travel' %}">Travel</a></li>
-                    <li><a href="fashion.html">Blog</a></li>
+                    <li><a href="{% url 'blog:fashion' %}">Blog</a></li>
                     <li><a href="{% url 'website:about' %}">About</a></li>
                     <li><a href="{% url 'website:contact' %}">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="colorlib-footer">
-                
+
                 <ul>
                     <li><a href="#"><i class="icon-facebook"></i></a></li>
                     <li><a href="#"><i class="icon-twitter"></i></a></li>
@@ -65,7 +65,7 @@
         {% block content %}
 
         {% endblock %}
-        
+
         <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
                 <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
                 <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
